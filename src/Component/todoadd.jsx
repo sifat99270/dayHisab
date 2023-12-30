@@ -11,15 +11,16 @@ const Todoadd = () => {
   const [obj, setObj] = useState([]);
 
   const [local, setLocal] = useState({});
-  const json = localStorage.getItem("user");
-  useEffect(() => {
 
+
+  useEffect(() => {
+    const json = localStorage.getItem("user");
     if (json === null) {
       setLocal({});
     } else {
       setLocal(JSON.parse(json));
     }
-  }, [json]);
+  }, []);
   useEffect(() => {
     if (local.array) {
       setObj(local.array);
