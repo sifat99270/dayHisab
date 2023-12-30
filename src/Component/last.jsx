@@ -70,7 +70,7 @@ const Last = () => {
           ? local.array.map((item, ind) => {
               return (
                 <p key={ind}>
-                  আগের জমা:<span className={classes.span}>{item.number}</span>{" "}
+                  {item.text}:<span className={classes.span}>{item.number}</span>{" "}
                 </p>
               );
             })

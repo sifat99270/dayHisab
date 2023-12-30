@@ -15,7 +15,6 @@ export default function HisabInput({ name, url, where }) {
     } else {
       setData(JSON.parse(local));
     }
-    console.log(JSON.parse(local));
   }, []);
   function handleChange(fill, value) {
     setValue((pre) => {
@@ -32,7 +31,6 @@ export default function HisabInput({ name, url, where }) {
       data.office = value;
     }
     localStorage.setItem("user", JSON.stringify(data));
-    console.log(new Date().toLocaleDateString());
     setValue(() => {
       return {
         text: "",
